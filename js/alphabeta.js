@@ -25,7 +25,6 @@ function alphabeta(node, depth, α, β, maximizingPlayer)
                  break (* α cut-off *)
          return ab
 */
-
 function valueToString(x) {
 	// Displays infinity as special character instead of text
 	if (x == Infinity)
@@ -37,11 +36,8 @@ function valueToString(x) {
 
 function alphabeta(node, alpha, beta, maximizingPlayer, order)
 {
-
-
 	function dashArray(indexes, children, node) {
-		var i;
-		for (i = children+1; i<indexes.length; i++)
+		for (var i = children+1; i<indexes.length; i++)
 			d3.selectAll("path")
 			  .filter(function(d){return d.id == node.children[indexes[i]].id;})
 			  	.attr("stroke-dasharray", "5, 5");
@@ -49,13 +45,13 @@ function alphabeta(node, alpha, beta, maximizingPlayer, order)
 
 	var nodeText = d3.selectAll("text").filter(function(d){return d.id == node.id;});
 	var ab, children;
-	var i, j, indexes = [];
+	var indexes = [];
 
 	if (node.data.eval != undefined) 
 		return node.data.eval;
 
-	j = node.children.length;
-	for(i = 0; i<j; i++)
+	var j = node.children.length;
+	for(var i = 0; i<j; i++)
 		indexes.push(i);
 
 	if (order == "rightFirst")
@@ -116,11 +112,11 @@ function minimax(node, maximizingPlayer)
 
 	if (maximizingPlayer) {
 		mm = -Infinity;
-		for (i in node.children)
+		for (var i in node.children)
 			mm = Math.max(minimax(node.children[i], false), mm);
 	} else {
 		mm = Infinity;
-		for (i in node.children)
+		for (var i in node.children)
 			mm = Math.min(minimax(node.children[i], true), mm);
 	}
 	nodeText.text("(MM="+valueToString(mm)+") "+node.data.move);
@@ -129,11 +125,10 @@ function minimax(node, maximizingPlayer)
 
 function randomize(node)
 {
-	var i;
 	if (node.data.eval != undefined) {
 		node.data.eval = Math.round(Math.random()*50)-25;
 		return;
 	}
-	for (i in node.children)
+	for (var i in node.children)
 		randomize(node.children[i]);
 }

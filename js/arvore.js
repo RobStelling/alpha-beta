@@ -180,10 +180,10 @@ function curveto(s, d) {
   //    of the curve and (x2 y2) as the control point at the end of the curve
   // C -> curveto (x1 y1 x2 y2 x y)+
   // C (source.y+destination.y)/2 source.x (source.y+destination.y)/2 destination.x destination.y destination.x
-  path = `M ${s.y} ${s.x} 
-          C ${(s.y+d.y)/2} ${s.x},
-            ${(s.y+d.y)/2} ${d.x},
-            ${d.y} ${d.x}`;
+  var path = `M ${s.y} ${s.x} 
+              C ${(s.y+d.y)/2} ${s.x},
+                ${(s.y+d.y)/2} ${d.x},
+                ${d.y} ${d.x}`;
 
   return path;
 }
