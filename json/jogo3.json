@@ -1,0 +1,121 @@
+{
+  "move": "Início",
+  "children": [{
+      "move": "1. e4",
+      "children": [{
+          "move": "1. ... e5",
+          "children": [{
+              "move": "2. Cf3",
+              "children": [{"move": "2. ... Cc6","eval": 2}, {"move": "2. ... d6","eval": -13}, {"move": "2. ... Cf6","eval": 7}]
+            },
+            {
+              "move": "2. d4",
+              "children": [{"move": "2. ... exd4","eval": -23}, {"move": "2. ... Cc6","eval": 23}, {"move": "2. ... De7","eval": -7}]
+            },
+            {
+              "move": "2. d3",
+              "children": [{
+                "move": "2. ... d5","eval": 4}, {"move": "2. ... Cc6","eval": 2}, {"move": "2. ... Cf6","eval": -1}, {"move": "2. ... Bc5","eval": 0}]
+            },
+            {
+              "move": "2. Bc4",
+              "children": [{"move": "2. ... Cf6","eval": -1}, {"move": "2. ... Bc5","eval": 3}, {"move": "2. ... Cc6","eval": 2}]
+            }
+          ]
+        },
+        {
+          "move": "1. ... Cf6",
+          "children": [{
+              "move": "2. e5",
+              "children": [{"move": "2. ... Cd5","eval": 2}, {"move": "2. ... Ce4","eval": 3}, {"move": "2. ... Cg8","eval": 2}]
+            },
+            {
+              "move": "2. Cc3", "eval": -2
+            },
+            {
+              "move": "2. d3",
+              "children": [{"move": "2. ... d5","eval": 2}, {"move": "2. ... e5","eval": 1}, {"move": "2. ... Cc6","eval": 4}]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "move": "1. g3",
+      "children": [{
+          "move": "1. ... g6",
+          "children": [{
+              "move": "2. Bg2",
+              "children": [{"move":"2. ... Bg7", "eval": 4},{"move":"2. ... d5", "eval": 2},{"move":"2. ... c6", "eval": 3}]
+            },
+            {
+              "move": "2. e4",
+              "children": [{"move":"2. ... e5", "eval": 3},{"move":"2. ... Bg7", "eval": 5},{"move":"2. ... d5", "eval": -1}]
+            },
+            {
+              "move": "2. d4",
+              "children": [{"move":"2. ... Bg7", "eval": 21},{"move":"2. ... c5", "eval": 3},{"move":"2. ... d6", "eval": 22}]
+            }
+          ]
+        },
+
+        {
+          "move": "1. ... Cf6",
+          "children": [{
+              "move": "2. Bg2",
+              "children": [{"move":"2. ... g6", "eval": 3},{"move":"2. ... d5", "eval": 42},{"move":"2. ... e5", "eval": 23}]
+            },
+            {
+              "move": "2. Cc3",
+              "children": [{"move":"2. ... d5", "eval": 24},{"move":"2. ... e5", "eval": 15},{"move":"2. ... g6", "eval": 3}]
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "move": "1. d4",
+      "children": [{
+          "move": "1. ... d5",
+          "children": [{
+              "move": "2. c4",
+              "children": [{"move":"2. ... dxc4", "eval": -17},{"move":"2. ... e6", "eval": -1},{"move":"2. ... c6", "eval": -15}]
+            },
+            {
+              "move": "2. g3",
+              "children": [{"move":"2. ... c6", "eval": 3},{"move":"2. ... e6", "eval": 4},{"move":"2. ... Cf6", "eval": -10}]
+            },
+            {
+              "move": "2. e3",
+              "children": [{"move":"2. ... c6", "eval": 0},{"move":"2. ... Cf6", "eval": 3},{"move":"2. ... g6", "eval": 2}]
+            }
+          ]
+        },
+        {
+          "move": "1. ... e5",
+          "children": [{
+            "move": "2. dxe5",
+            "children": [{"move":"2. ... Cc6", "eval": 3},{"move":"2. ... De7", "eval": 1},{"move":"2. ... d6", "eval": 3}]
+          }]
+        },
+        {
+          "move": "1. ... Cf6",
+          "children": [{
+              "move": "2. c4",
+              "children": [{"move":"2. ... d5", "eval": 45},{"move":"2. ... c5", "eval": 32},{"move":"2. ... e5", "eval": 12}]
+            },
+            {
+              "move": "2. g3",
+              "children": [{"move":"2. ... d5", "eval": -17},{"move":"2. ... e6", "eval": -14},{"move":"2. ... c5", "eval": -13}]
+            },
+            {
+              "move": "2. Cf3",
+              "children": [{"move":"2. ... e6", "eval": -1},{"move":"2. ... d5", "eval": -33},{"move":"2. ... c5", "eval": -3}]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<link rel="stylesheet" href="./css/styles.css">
+<body>
+<!--
+	d3.js - D3 V4 full library
+	arvore.js - Tree drawing functions
+	alphabeta.js - Minimax and alpha-beta pruning implementations
+ -->
+<script src="./js/d3.min.js" charset="utf-8"></script>
+<script src="./js/arvore.js" charset="utf-8"></script>
+<script src="./js/alphabeta.js" charset="utf-8"></script>
+<!--
+	Action buttons:
+	Minimax: Triggers minimax on the current tree
+	Left first: Triggers left first (Left->top of the screen) alpha-beta pruning
+	Right first: Triggers right first (Right->bottom of the screen) alpha-beta pruning
+	Reset: cleans up tree annotations
+	Randomize: Creates new random scores on the evaluation nodes
+	Restore: Restore original scores
+ -->
+<center>
+<button type="button" onClick="clearTree();minimax(root, true);">Minimax</button>
+<button type="button" onClick="clearTree();alphabeta(root, -Infinity, Infinity, true, 'leftFirst');">Left first</button>
+<button type="button" onClick="clearTree();alphabeta(root, -Infinity, Infinity, true, 'rightFirst');">Right first</button>
+<button type="button" onClick="clearTree();">Reset</button>
+<button type="button" onClick="randomize(root);clearTree();">Randomize</button>
+<button type="button" onClick="restore(root);clearTree();">Restore</button>
+</center>
+<script>
+  const pathStroke = "#aaa";
+  function clearTree() {
+  	// Cleanup paths and text
+  	d3.selectAll("path")
+  		.attr("stroke-dasharray", "")
+  		.style("stroke", pathStroke);
+    d3.selectAll("text")
+    	.text(function(d){return d.data.move+(d.data.eval!=undefined?": "+d.data.eval.toLocaleString("pt-br", {maximumFractionDigits: 0}):"");});
+  }
+  startTree("jogo.json");
+</script>
+</body>

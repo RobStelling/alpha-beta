@@ -1,0 +1,31 @@
+.node {
+  cursor: pointer;
+}
+
+.max {
+  fill: #fff;
+  stroke: gray;
+  stroke-width: 1.5px;
+}
+
+.min {
+  fill: #000;
+  stroke: gray;
+  stroke-width: 1.5px;
+}
+
+.eval {
+  fill: #8da0cb;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+.node text {
+  font: 18px sans-serif;
+}
+
+.link {
+  fill: none;
+  stroke-width: 4px;
+  opacity: 0.7;
+}
