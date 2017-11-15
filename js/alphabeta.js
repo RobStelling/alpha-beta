@@ -37,9 +37,7 @@ function valueToString(x) {
 
 function alphabeta(node, alpha, beta, maximizingPlayer, order)
 {
-	function nodeId(d) {
-		return d.id == node.id;
-	}
+
 
 	function dashArray(indexes, children, node) {
 		var i;
@@ -49,7 +47,7 @@ function alphabeta(node, alpha, beta, maximizingPlayer, order)
 			  	.attr("stroke-dasharray", "5, 5");
 	}
 
-	var nodeText = d3.selectAll("text").filter(nodeId);
+	var nodeText = d3.selectAll("text").filter(function(d){return d.id == node.id;});
 	var ab, children;
 	var i, j, indexes = [];
 
@@ -111,12 +109,8 @@ function alphabeta(node, alpha, beta, maximizingPlayer, order)
  */
 function minimax(node, maximizingPlayer)
 {
-	function nodeId(d) {
-		return d.id == node.id;
-	}
-
 	var mm;
-	var nodeText = d3.selectAll("text").filter(nodeId);
+	var nodeText = d3.selectAll("text").filter(function(d){return d.id == node.id;});
 	if (node.data.eval != undefined)
 		return node.data.eval;
 
